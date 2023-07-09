@@ -1,0 +1,16 @@
+.bg-image {
+    /* The image used */
+    background-image: url(bgtreat1.jpg);
+  
+    /* Add the blur effect */
+    filter: blur(10px);
+    -webkit-filter: blur(5px);
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
