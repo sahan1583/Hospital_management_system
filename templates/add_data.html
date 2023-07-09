@@ -1,0 +1,339 @@
+<style>
+
+.bg-text {
+      background-color: rgb(0, 0, 0); /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+      color: white;
+      font-weight: bold;
+      border: 3px solid #f1f1f1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      width: 50%;
+      padding: 20px;
+      text-align: center;
+      height: 50%;
+    }
+ 
+  /* .eform {
+    margin-top: 2cm;
+    font-size: 40px;
+  } */
+
+  /* .ename {
+    margin-right: 3cm;
+    
+  }
+
+  #pname {
+    margin-right: 5cm;
+  }
+
+  .eid {
+    margin-right: 4.3cm;
+  }
+
+  #pid {
+    margin-right: 5.1cm;
+  }
+
+  .ssn {
+    margin-right: 8.3cm;
+  } */
+
+
+ 
+ 
+
+  .a {
+    padding-left: 1cm;
+    padding-right: 1cm;
+    border-radius: 18px;
+    border: rgb(73, 11, 132);
+    background-color: rgb(229, 221, 237);
+    border-style: solid;
+    font-weight: bold;
+    font-size: 28px;
+    transition: opacity 0.4s;
+  }
+  .a:hover {
+    opacity: 0.5;
+    box-shadow: 5px 5px 10px rgba(89, 89, 94, 0.15);
+  }
+
+  
+</style>
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+    <link href="{% static 'add.css' %}" rel="stylesheet">
+    <title>Enter Data</title>
+  </head>
+  <body>
+
+    
+
+    <style>
+    .heading {
+     /* font-family: Arial, Helvetica, sans-serif; */
+     font-family: Georgia, serif;
+     font-variant-caps: small-caps;
+      text-align: center;
+      color: white;
+      text-align: center;
+      -webkit-animation: glow 1s ease-in-out infinite alternate;
+      -moz-animation: glow 1s ease-in-out infinite alternate;
+      animation: glow 1s ease-in-out infinite alternate;
+      font-size: 1.5cm;
+      padding-bottom: 20px;
+    }
+
+    @-webkit-keyframes glow {
+      from {
+        text-shadow: 0 0 10px #eeeeee, 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000, 0 0 50px #9554b3, 0 0 60px #9554b3, 0 0 70px #9554b3;
+      }
+
+      to {
+        text-shadow: 0 0 20px #eeeeee, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+      }
+    }
+
+
+    .ename{
+      font-size: 30px;
+      font-weight: bold;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+
+      
+    }
+
+    .ename1{
+      font-size: 25px;
+      font-weight: bold;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      margin-left: 0.7cm;
+      width: 8.5cm;
+     
+
+    }
+    .eid{
+      font-size: 30px;
+      font-weight: bold;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      
+
+    }
+    .eid-id{
+
+      font-size: 25px;
+     margin-left: 1.3cm;
+     padding-right: -1cm;
+     width: 8.5cm;
+    
+     
+    }
+
+    .ssn{
+      font-size: 30px;
+      font-weight: bold;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .pass{
+      font-size: 30px;
+      font-weight: bold;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .s{
+
+      font-size: 25px;
+     margin-left: 2.7cm;
+     background: #f1f1f1;
+     
+     width: 8.5cm;
+    }
+    .s1{
+background: #f1f1f1;
+font-size: 25px;
+margin-left: 4.8cm;
+
+width: 8.5cm;
+}
+
+/* Style the navigation bar */
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+  padding: 2px;
+  line-height: 0px;
+  height: 90px;
+}
+
+/* Navbar links */
+.navbar a {
+  float: left;
+  text-align: center;
+  padding: 6px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  margin-left: 20px;
+  padding-right: 20px;
+}
+
+/* Navbar links on mouse-over */
+.navbar a:hover {
+  background-color: #000;
+ 
+}
+ 
+       </style> 
+     
+      <!-- Load an icon library -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     
+      <div class="navbar">
+        <a class="active" href="http://127.0.0.1:8000/dataadminstrator/"><i class="fa fa-fw fa-home"></i> Home</a>   
+      </div>  
+    <div class="bg-image"></div>
+    
+    <div class="bg-text">
+      <h1 class="heading">
+        Enter required data
+      </h1>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous" ></script>
+
+      <form class="eform" action="http://127.0.0.1:8000/add_user/" method="post">
+        {% csrf_token %}
+        <div> <label class="ename" for="name"> Employee name:</label>
+          <input type="text" id="name" name="name" class="ename1" /></div>
+
+       <div>  <label class="eid" for="pid"> Employee ID:</label>
+        <input type="text" id="pid" name="employee_id" class="eid-id" /> </div>
+
+        <div> <label class="ssn" for="pssn"> SSN:</label>
+          <input type="number" id="pssn" name="SSN" class="s1" /> <br />
+  </div>
+        <div> <label class="pass" for="pwd"> Password:</label>
+          <input type="password" id="pwd" name="password" class="s"  /></div>
+
+        <br/> <br/> 
+       <div> 
+        <input type="hidden" name="user_type" value="{{user_type}}">
+        <input type="submit" value=" Submit " class="a" />
+        <input type="reset" class="a" />
+       </div>
+      </form>
+
+
+
+
+
+      
+    </div>
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <style>
+      /*---------------------------------------
+     Social section
+  -----------------------------------------*/
+      footer {
+        padding: 0px 0px 0px 0px;
+       
+        background-color: black;
+        margin: 0px;
+      }
+  
+      .fa {
+        padding: 20px;
+        font-size: 23px;
+        width: 60px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+        border-radius: 50%;
+      }
+  
+      .fa:hover {
+        opacity: 0.5;
+        text-decoration: none;
+      }
+  
+      .fa-facebook {
+        background: #3B5998;
+        color: white;
+        margin-top: 30px;
+      }
+  
+      .fa-whatsapp {
+        background: #25d366;
+        color: white;
+      }
+  
+      .fa-twitter {
+        background: #55ACEE;
+        color: white;
+      }
+  
+      .fa-instagram {
+        background: #125688;
+        color: white;
+      }
+  
+      p {
+        text-align: center;
+  
+      }
+    
+    </style>
+
+  
+  <footer class="foot">
+  
+    <p>
+      <a href="https://facebook.com/sumit.luv/" class="fa fa-facebook"></a>
+      <a href="https://api.whatsapp.com/send?phone=919572181024&text=Hello%20Sumit.%0d%0aHow%20are%20you%20%3f%0d%0aI%20came%20from%20your%20website.&source=&data=#" class="fa fa-whatsapp"></a>
+      <a href="https://instagram.com/sumit.luv" class="fa fa-instagram"></a>
+      <a href="https://twitter.com/sumitkumar1503" class="fa fa-twitter"></a>
+    </p>
+  
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+          <div style="color:#ffffff;" class="wow fadeInUp footer-copyright">
+            <p>Made in India <br>
+              Copyright &copy; 2023 DBMS </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  
+
+
+  </body>
+</html>

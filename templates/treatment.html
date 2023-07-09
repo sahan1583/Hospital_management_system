@@ -1,0 +1,562 @@
+{% load static %}
+<style>
+
+.bg-text{
+    background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+    .tests{
+        margin-top: 2cm;
+        font-size: 33px;
+       
+    }
+    .patient{
+        margin-left: 4cm;
+        margin-right: 1.4cm;
+        
+    }
+    .physician{
+        margin-left: 3cm;
+    }
+    .procedure{
+        margin-left: 2.6cm;
+        margin-right: 0.1cm;
+    }
+    .s{
+
+width: 9.5cm;
+height: 35px;
+font-size: 25px;
+font-family: 'Times New Roman', Times, serif;
+}
+
+    .a{
+    padding-left: 1cm;
+    padding-right: 1cm;
+    border-radius: 18px;
+    border: rgb(139, 196, 236);
+    background-color: rgb(149, 177, 186);
+    border-style: solid;
+    font-weight: bold;
+    font-size: 25px;
+    transition: opacity 0.4s;
+}
+.a:hover{
+    opacity: 0.5;
+    box-shadow: 5px 5px 10px rgba(89, 89, 94, 0.15);
+    
+
+}
+.trheading{text-align: center;
+      color: white;
+      text-align: center;
+      -webkit-animation: glow 1s ease-in-out infinite alternate;
+      -moz-animation: glow 1s ease-in-out infinite alternate;
+      animation: glow 1s ease-in-out infinite alternate;
+    }
+
+    @-webkit-keyframes glow {
+      from {
+        text-shadow: 0 0 10px #eeeeee, 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000, 0 0 50px #9554b3, 0 0 60px #9554b3, 0 0 70px #9554b3;
+      }
+
+      to {
+        text-shadow: 0 0 20px #eeeeee, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+      }
+    }
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+
+* {
+  font-family: Open Sans;
+}
+
+
+
+
+
+.footer-distributed{
+	background: #2f2e2e;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 55px 50px;
+    margin-top: 1cm;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Open Sans', cursive;
+	margin: 0;
+}
+
+.footer-distributed h3 span{
+	color:  lightseagreen;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+  font-weight:400;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #7b7777;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+  font-weight:400;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  lightseagreen;
+	text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #f5f8fa;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+        
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+   
+</style>
+    <!DOCTYPE html>
+    {% load static %}
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'treat.css' %}">
+        <title>Treatments</title>
+    </head>
+    <body>
+   <section>
+
+    <style>
+      /* Style the header with a grey background and some padding */
+  .header {
+  overflow: hidden;
+  background-color: #e9e6e6ea;
+  padding: 8px 8px;
+  }
+  
+  /* Style the header links */
+  .header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 25px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  .logo{
+  text-align: center;
+  
+  margin-left: 19cm;
+  font-weight: bold;
+  
+  }
+  
+  /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+  .header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  
+  }
+  
+  /* Change the background color on mouse-over */
+  .header a:hover {
+  background-color: #ddd;
+  color: black;
+  }
+  
+  /* Style the active/current link*/
+  .header a.active {
+  background-color: dodgerblue;
+  color: white;
+  }
+  
+  /* Float the link section to the right */
+  .header-right {
+  float: right;
+  }
+  
+  /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+  @media screen and (max-width: 500px) {
+  .header a {
+  float: none;
+  display: block;
+  text-align: left;
+  }
+  .header-right {
+  float: none;
+  }
+  }
+  
+  .d-flex{
+  padding: 2px;
+  }
+  
+  
+  
+    </style>
+  
+  
+  <div class="header">
+  <a href="#default" class="logo">Treatment Data Entry</a>
+  <div class="header-right">
+    <a class="active" href="http://127.0.0.1:8000/deo/">Back</a>
+    <a href="#">Contact</a>
+    <a href="#">About</a>
+    <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  
+  </div>
+  </div>
+  
+    <div class="bg-image" > </div>
+    <div class="bg-text">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <h1 class="trheading"><strong>  Treatments Undergone by Patient</strong></h1>
+        <form class="tests" action="http://127.0.0.1:8000/treatment_submit/" method="post"> 
+          {% csrf_token %}
+            <label for="pname"> Patient name:</label>
+            <input type="text" id="pname" name="pname" class="s"> 
+    
+            <label class="patient" for="pid"> Patient ID:</label>
+            <input type="number" id="pid" name="patient_id" class="s">  <br>
+    
+            <label for="prname"> Procedure name:</label>
+            <input type="text" id="prname" name="prname" class="s"> 
+    
+            <label class="procedure" for="pr"> Procedure ID:</label>
+            <input type="number" id="pr" name="procedure_id" class="s"> <br>
+
+            <label for="phyname"> Physician name:</label>
+        <input type="text" id="phyname" name="phyname" class="s"> 
+
+        <label class="physician" for="phyid"> Physician ID:</label>
+        <input type="text" id="phyid" name="physician_id" class="s"> <br>
+
+        
+
+        <label for="stay"> Room:</label>
+        <input type="text" id="stay" name="room" class="s"> <br>
+    
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" class="s"> <br>
+            <label for="result"> Result:</label>
+    
+            <input type="text" id="result" name="result" class="s"> <br>
+            <input type="submit" value="Submit" class="a">
+            <input type="reset" class="a">
+        </form>
+    </div>
+   </section>
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+   <style>
+     /*---------------------------------------
+    Social section
+ -----------------------------------------*/
+     footer {
+       padding: 0px 0px 0px 0px;
+       background-color: rgb(24, 24, 24);
+       margin: 0px;
+     }
+ 
+     .fa {
+       padding: 20px;
+       font-size: 23px;
+       width: 60px;
+       text-align: center;
+       text-decoration: none;
+       margin: 5px 2px;
+       border-radius: 50%;
+     }
+ 
+     .fa:hover {
+       opacity: 0.5;
+       text-decoration: none;
+     }
+ 
+     .fa-facebook {
+       background: #3B5998;
+       color: white;
+       margin-top: 30px;
+     }
+ 
+     .fa-whatsapp {
+       background: #25d366;
+       color: white;
+     }
+ 
+     .fa-twitter {
+       background: #55ACEE;
+       color: white;
+     }
+ 
+     .fa-instagram {
+       background: #125688;
+       color: white;
+     }
+ 
+     p {
+       text-align: center;
+ 
+     }
+   </style>
+ </head>
+ 
+ <footer>
+ 
+   <p>
+     <a href="https://facebook.com/sumit.luv/" class="fa fa-facebook"></a>
+     <a href="https://api.whatsapp.com/send?phone=919572181024&text=Hello%20Sumit.%0d%0aHow%20are%20you%20%3f%0d%0aI%20came%20from%20your%20website.&source=&data=#" class="fa fa-whatsapp"></a>
+     <a href="https://instagram.com/sumit.luv" class="fa fa-instagram"></a>
+     <a href="https://twitter.com/sumitkumar1503" class="fa fa-twitter"></a>
+   </p>
+ 
+   <br>
+   <div class="container">
+     <div class="row">
+       <div class="col-md-12 col-sm-12">
+         <div style="color:#ffffff;" class="wow fadeInUp footer-copyright">
+           <p>Made in India <br>
+             Copyright &copy; 2023 DBMS </p>
+         </div>
+       </div>
+     </div>
+   </div>
+ </footer>
+
+   <!-- <footer class="footer-distributed">
+    
+    <div class="footer-left">
+
+        <h3>Company<span>logo</span></h3>
+
+        <p class="footer-links">
+            <a href="#" class="link-1">Home</a>
+            
+            <a href="#">Blog</a>
+        
+            <a href="#">Pricing</a>
+        
+            <a href="#">About</a>
+            
+            <a href="#">Faq</a>
+            
+            <a href="#">Contact</a>
+        </p>
+
+        <p class="footer-company-name">Company Name © 2023</p>
+    </div>
+
+    <div class="footer-center">
+
+        <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span>444 S. Cedros Ave</span> Solana Beach, California</p>
+        </div>
+
+        <div>
+            <i class="fa fa-phone"></i>
+            <p>+1.555.555.5555</p>
+        </div>
+
+        <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:support@company.com">support@company.com</a></p>
+        </div>
+
+    </div>
+
+    <div class="footer-right">
+
+        <p class="footer-company-about">
+            <span>About the company</span>
+            Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+        </p>
+
+        <div class="footer-icons">
+            
+
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+
+        </div>
+
+    </div>
+
+</footer>  -->
+
+       
+    </body>
+    </html>

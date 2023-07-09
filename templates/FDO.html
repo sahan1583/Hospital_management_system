@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+
+  <style>
+    /* Style the header with a grey background and some padding */
+    .header {
+      overflow: hidden;
+      background-color: #4edb4eea;
+      padding: 20px 10px;
+    }
+
+    /* Style the header links */
+    .header a {
+      float: left;
+      color: black;
+      text-align: center;
+      padding: 12px;
+      text-decoration: none;
+      font-size: 20px;
+      line-height: 25px;
+      border-radius: 4px;
+      font-weight: bold;
+
+    }
+
+    /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+    .header a.logo {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    /* Change the background color on mouse-over */
+    .header a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    /* Style the active/current link*/
+    .header a.active {
+      background-color: dodgerblue;
+      color: white;
+    }
+
+    /* Float the link section to the right */
+    .header-right {
+      float: right;
+    }
+
+    /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+    @media screen and (max-width: 500px) {
+      .header a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+
+      .header-right {
+        float: none;
+      }
+    }
+
+    .d-flex {
+      padding: 2px;
+    }
+
+    .h {
+      margin-left: 18cm;
+
+      text-align: center;
+      color: white;
+      -webkit-animation: glow 1s ease-in-out infinite alternate;
+      -moz-animation: glow 1s ease-in-out infinite alternate;
+      animation: glow 1s ease-in-out infinite alternate;
+    }
+
+    @-webkit-keyframes glow {
+      from {
+        text-shadow: 0 0 10px #eeeeee, 0 0 20px #a415a9, 0 0 30px #8b2784, 0 0 40px #ea63d6, 0 0 50px #9554b3, 0 0 60px #de66e4, 0 0 70px #9554b3;
+      }
+
+      to {
+        text-shadow: 0 0 20px #eeeeee, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #dcccd4, 0 0 70px #ff4da6, 0 0 80px #bd32c2;
+      }
+    }
+  </style>
+
+
+  <div class="header">
+    <div class="h">
+      <a href="#default" class="logo">FRONT DESK OPERATOR</a>
+    </div>
+    <div class="header-right">
+      <a class="active" href="#home">Home</a>
+      <a href="#contact">Contact</a>
+      <a class="active" style="float:left" href="http://127.0.0.1:8000/homepage/">Logout</a>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <style>
+    .col1 {
+
+      padding: 10px;
+      padding-left: 0.5cm;
+    }
+
+    .col {
+      padding: 10px;
+    }
+
+    .card-title {
+      font-weight: bold;
+      text-align: center;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 40px;
+
+
+      color: rgb(17, 17, 17);
+      text-align: center;
+      -webkit-animation: glow 1s ease-in-out infinite alternate;
+      -moz-animation: glow 1s ease-in-out infinite alternate;
+      animation: glow 1s ease-in-out infinite alternate;
+    }
+
+    @-webkit-keyframes glow {
+      from {
+        text-shadow: 0 0 10px #9aab1a, 0 0 20px #bcb527, 0 0 30px #f5f4f4, 0 0 40px #bbbaba, 0 0 50px #bedf54, 0 0 60px #7bc41d, 0 0 70px #d3b84c;
+      }
+
+      to {
+        text-shadow: 0 0 20px #eeeeee, 0 0 30px #f2ea79, 0 0 40px #e4ec45, 0 0 50px #fbf84a, 0 0 60px #fcff4d, 0 0 70px #f6f22d, 0 0 80px #f3fd40;
+      }
+    }
+
+    .del {
+      font-size: larger;
+      font-weight: bold;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      margin-left: 2cm;
+    }
+
+    .s3 {
+      margin-left: 1cm;
+      font-size: 23px;
+      margin-bottom: 0.51cm;
+    }
+
+    .s2 {
+      margin-left: 0.3cm;
+    }
+
+    .sbtn {
+      text-align: center;
+      font-weight: bold;
+      margin-left: 5cm;
+      border-color: rgb(10, 10, 10);
+      background-color: #0abb37;
+      border: black;
+      color: rgb(103, 78, 78);
+      padding: 8px 20px;
+      text-align: center;
+      font-size: 16px;
+      /* margin: 4px 2px; */
+      border-radius: 20px;
+      opacity: 1;
+      transition: 0.3s;
+    }
+
+    .sbtn:hover {
+      opacity: 0.6
+    }
+
+    .card-img-top {
+      padding: 1cm;
+    }
+
+    .row {
+      padding: 1cm;
+    }
+  </style>
+
+
+  <div>
+
+  </div>
+
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col1">
+      <div class="card h-100">
+        <img src="{% static 'admit.jpg' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Admit Patient</h5>
+
+        </div>
+        <form action="http://127.0.0.1:8000/fdo_task/" method="post">
+         {% csrf_token %}
+          <div class="del">
+
+            <label class="patient" for="pid"> Patient ID:</label>
+            <input type="number" id="pid" name="patient_id" class="s"> <br><br>
+
+            <label for="room"> Room ID:</label>
+            <input type="number" id="rid" name="room_id" class="s2"> <br><br>
+
+            <label for="date"> Date :</label>
+            <input type="date" id="date" name="date" class="s3">
+
+          </div>
+
+           <input type="hidden" name="task" value="admit">
+
+
+          <div class="card-footer">
+            <small class="text-muted">
+              <button class="sbtn" type="submit"> SUBMIT</button>
+            </small>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+
+    <div class="col">
+      <div class="card h-100">
+        <img src="{% static 'registration.jpg' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Registration</h5>
+
+        </div>
+        <form action="http://127.0.0.1:8000/fdo_task/" method="post">
+          {% csrf_token %}
+    
+          <div class="del">
+            <label class="patient" for="pid"> Patient ID:</label>
+            <input type="number" id="pid" name="patient_id" class="s"> <br> <br>
+
+            <!-- <label for="room"> Room ID:</label>
+            <input type="number" id="rid" name="roomid" class="s2"> <br> <br> -->
+
+            <label for="date"> Date :</label>
+            <input type="date" id="date" name="date" class="s3">
+          </div>
+
+
+          <input type="hidden" name="task" value="register">
+
+  
+          <div class="card-footer">
+            <small class="text-muted">
+              <button class="sbtn" type="submit"> SUBMIT</button>
+            </small>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+
+
+    <div class="col">
+      <div class="card h-100">
+        <img src="{% static 'discharge.jpg' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Discharge</h5>
+
+        </div>
+        <form action="http://127.0.0.1:8000/fdo_task/" method="post">
+          {% csrf_token %}
+
+          <div class="del">
+            <label class="patient" for="pid"> Patient ID:</label>
+            <input type="number" id="pid" name="patient_id" class="s"> <br> <br>
+
+            <label for="room"> Room ID:</label>
+            <input type="number" id="rid" name="room_id" class="s2"> <br> <br>
+
+            <label for="date"> Date :</label>
+            <input type="date" id="date" name="date" class="s3">
+
+          </div>
+          <input type="hidden" name="task" value="discharge">
+
+
+
+          <div class="card-footer">
+            <small class="text-muted">
+              <button class="sbtn" type="submit"> SUBMIT</button>
+            </small>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+        {% if rooms_list %}
+        <table class="table table-dark">
+          <thead>
+            <tr>
+              <th scope="col">S.NO</th>
+              <th scope="col">Room No</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for room in rooms_list %}
+            <tr class="table-light">
+              <th scope="row">{{forloop.counter}}</th>
+              {% for x in room %}
+              <td>{{x}}</td>
+              {% endfor %}
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        {% else %}
+        <h3 class="text-danger">No Available Rooms</h3>
+        {% endif %}
+      </div>
+      <div class="col-md-4">
+        {% if appointmentrequests %}
+        <table class="table ">
+          <thead class="text-bg-dark">
+            <tr>
+              <th scope="col">S.NO</th>
+              <th scope="col">Patient Name</th>
+              <th scope="col">SSN</th>
+              <th scope="col">Department</th>
+              <th scope="col">Appointment Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for emerg_apt in emergency_list %}
+            <tr class="bg-danger">
+              <td scope="row">{{forloop.counter}}</td>
+              {% for x in emerg_apt %}
+              <td>{{x}}</td>
+              {% endfor %}
+            </tr>
+            {% endfor %}
+            {% for general_apt in general_list %}
+            <tr class="bg-light">
+              <td scope="row">{{forloop.counter}}</td>
+              {% for x in general_apt %}
+              <td>{{x}}</td>
+              {% endfor %}
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+
+
+
+        {% else %}
+        <h3 class="text-danger">No Appointment Requests</h3>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+
+  <!-- footer -->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <style>
+    /*---------------------------------------
+    Social section
+ -----------------------------------------*/
+    footer {
+      padding: 0px 0px 0px 0px;
+      background-color: rgb(27, 26, 26);
+      margin: 0px;
+    }
+
+    .fa {
+      padding: 20px;
+      font-size: 23px;
+      width: 60px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 2px;
+      border-radius: 50%;
+    }
+
+    .fa:hover {
+      opacity: 0.5;
+      text-decoration: none;
+    }
+
+    .fa-facebook {
+      background: #3B5998;
+      color: white;
+      margin-top: 30px;
+    }
+
+    .fa-whatsapp {
+      background: #25d366;
+      color: white;
+    }
+
+    .fa-twitter {
+      background: #55ACEE;
+      color: white;
+    }
+
+    .fa-instagram {
+      background: #125688;
+      color: white;
+    }
+
+    p {
+      text-align: center;
+
+    }
+
+    .f {
+      margin-top: 13cm;
+    }
+  </style>
+
+
+
+  <footer class="f">
+
+    <p>
+      <a href="https://facebook.com/sumit.luv/" class="fa fa-facebook"></a>
+      <a href="https://api.whatsapp.com/send?phone=919572181024&text=Hello%20Sumit.%0d%0aHow%20are%20you%20%3f%0d%0aI%20came%20from%20your%20website.&source=&data=#"
+        class="fa fa-whatsapp"></a>
+      <a href="https://instagram.com/sumit.luv" class="fa fa-instagram"></a>
+      <a href="https://twitter.com/sumitkumar1503" class="fa fa-twitter"></a>
+    </p>
+
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+          <div style="color:#ffffff;" class="wow fadeInUp footer-copyright">
+            <p>Made in India <br>
+              Copyright &copy; 2023 DBMS </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
